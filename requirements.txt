@@ -1,0 +1,2 @@
+# Python Standard Library only (Zero external dependencies required)
+# Supports Python 3.9+ natively

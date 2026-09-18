@@ -1,0 +1,61 @@
+name: Historical Graph Backfill
+
+on:
+  workflow_dispatch:
+    inputs:
+      days_back:
+        description: 'Number of past days to backfill'
+        required: true
+        default: '30'
+      min_commits:
+        description: 'Minimum commits per day'
+        required: true
+        default: '1'
+      max_commits:
+        description: 'Maximum commits per day'
+        required: true
+        default: '3'
+      user_email:
+        description: 'GitHub Email address for commit attribution'
+        required: true
+        default: ''
+
+jobs:
+  backfill:
+    name: Run Historical Backfill Engine
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Execute Backfill Generator
+        run: |
+          EMAIL="${{ github.event.inputs.user_email }}"
+          if [ -z "$EMAIL" ]; then
+            EMAIL="${{ secrets.USER_EMAIL }}"
+          fi
+          if [ -z "$EMAIL" ]; then
+            echo "::error::user_email input or USER_EMAIL secret is required for commit attribution."
+            exit 1
+          fi
+
+          python src/backfill_engine.py \
+            --days ${{ github.event.inputs.days_back }} \
+            --min-commits ${{ github.event.inputs.min_commits }} \
+            --max-commits ${{ github.event.inputs.max_commits }} \
+            --email "$EMAIL"
+
+      - name: Push Backfilled Commits to Repository
+        run: |
+          git push origin HEAD:${{ github.ref_name }} --force
