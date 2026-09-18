@@ -1,0 +1,53 @@
+====================================================================
+PRIVACY POLICY & LEGAL COMPLIANCE
+====================================================================
+Last Updated: September 19, 2026
+
+1. OVERVIEW & DATA PRIVACY
+--------------------------------------------------------------------
+- Zero Data Collection: This project does NOT collect, track, store,
+  transmit, or harvest any personal data, user analytics, tracking
+  cookies, IP addresses, or telemetry to external servers.
+- Local & Isolated Execution: All scripts execute locally on your
+  machine or within isolated GitHub Actions virtual runners.
+- Data Retention: The only data modified by this repository is the
+  activity log stored strictly inside data/activity_log.json within
+  your own GitHub repository.
+
+2. INTELLECTUAL PROPERTY & COPYRIGHT
+--------------------------------------------------------------------
+- Original Codebase: All source code, workflows, scripts, and
+  documentation contained in this repository are 100% original work.
+- Licensing: This project is released under the open-source MIT License
+  (see LICENSE file). You are free to use, modify, distribute, and
+  integrate this software without copyright restrictions.
+- Third-Party Rights: This repository does not violate or infringe upon
+  any third-party copyrights, patents, trademarks, or trade secrets.
+
+3. LEGAL STATUS & SAFETY
+--------------------------------------------------------------------
+- Legal Compliance: Running automated commit workflows in your own
+  personal repository is fully legal.
+- No Unauthorized Access: The scripts inside this repository interact
+  exclusively with the host repository in which they reside. They do not
+  attempt unauthorized network access, scraping, or automated actions
+  on third-party systems.
+
+4. GITHUB TERMS OF SERVICE & FAIR RESOURCE USAGE
+--------------------------------------------------------------------
+- Built-in GitHub Features: The automated workflows utilize official
+  GitHub Actions infrastructure provided by GitHub.
+- Compute Resource Limits: The daily workflow uses approximately 10
+  seconds of runner execution time per day (~5 minutes per month),
+  staying far below GitHub's monthly free tier allowance of 2,000
+  build minutes.
+- Acceptable Use: This project complies with GitHub's Acceptable Use
+  Policies. It does not perform spamming, crypto-mining, automated
+  interaction on third-party repositories, or service disruption.
+
+5. CONTACT & QUESTIONS
+--------------------------------------------------------------------
+If you have any questions regarding this Privacy Policy or codebase
+compliance, please refer to the project documentation in README.md or
+open an Issue in the official repository.
+====================================================================
