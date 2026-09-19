@@ -18,6 +18,10 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 DATA_LOG_PATH = REPO_ROOT / "data" / "activity_log.json"
 
 
+# Mumbai Timezone (IST, UTC+5:30)
+MUMBAI_TZ = datetime.timezone(datetime.timedelta(hours=5, minutes=30))
+
+
 def generate_backfill(
     days: int,
     min_commits: int,
@@ -27,11 +31,11 @@ def generate_backfill(
     include_weekends: bool = True,
     dry_run: bool = False,
 ):
-    """Generates commits backward from today for `days` count."""
-    today = datetime.datetime.now(datetime.timezone.utc)
+    """Generates commits backward from today for `days` count in Mumbai Timezone (IST)."""
+    today = datetime.datetime.now(MUMBAI_TZ)
     total_commits_created = 0
 
-    print(f"[*] Starting backfill generation for the past {days} days...")
+    print(f"[*] Starting backfill generation for the past {days} days (Mumbai Time IST, UTC+5:30)...")
     print(f"[*] Commit range per day: {min_commits} to {max_commits}")
     print(f"[*] Identity: {user_name} <{user_email}>")
 
@@ -54,9 +58,10 @@ def generate_backfill(
                 hour=random.randint(9, 21),
                 minute=random.randint(0, 59),
                 second=random.randint(0, 59),
+                tzinfo=MUMBAI_TZ,
             )
 
-            formatted_date = commit_time.strftime("%Y-%m-%dT%H:%M:%S")
+            formatted_date = commit_time.strftime("%Y-%m-%dT%H:%M:%S+05:30")
 
             commit_msg = f"chore(backfill): historical activity log for {commit_time.strftime('%Y-%m-%d')}"
 

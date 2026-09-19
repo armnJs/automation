@@ -34,8 +34,12 @@ def load_config(config_path: Path) -> dict:
         return json.load(f)
 
 
+# Mumbai Timezone (IST, UTC+5:30)
+MUMBAI_TZ = datetime.timezone(datetime.timedelta(hours=5, minutes=30))
+
+
 def append_activity_log(log_file: Path, message: str, run_type: str = "daily_automation") -> dict:
-    """Appends a new structured entry to the activity log file."""
+    """Appends a new structured entry to the activity log file in Mumbai Timezone (IST)."""
     log_file.parent.mkdir(parents=True, exist_ok=True)
 
     entries = []
@@ -46,7 +50,7 @@ def append_activity_log(log_file: Path, message: str, run_type: str = "daily_aut
         except json.JSONDecodeError:
             entries = []
 
-    timestamp = datetime.datetime.now(datetime.timezone.utc).isoformat()
+    timestamp = datetime.datetime.now(MUMBAI_TZ).isoformat()
     entry = {
         "timestamp": timestamp,
         "status": "active",

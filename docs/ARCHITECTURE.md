@@ -10,7 +10,7 @@ This document details the architectural layout, core components, and operational
 flowchart TD
     subgraph GitHub Cloud
         GHA[GitHub Actions Runner]
-        CRON[Schedule Trigger: 12:00 UTC]
+        CRON[Schedule Trigger: 09:00 AM IST / 03:30 UTC]
         MANUAL[Manual Trigger: workflow_dispatch]
         REPO[(GitHub Repository)]
     end
@@ -81,7 +81,7 @@ flowchart TD
 - Generates historical git commits with explicit `GIT_AUTHOR_DATE` and `GIT_COMMITTER_DATE` environment variables to backfill contribution history.
 
 ### 3. Workflows (`.github/workflows/`)
-- `daily-activity.yml`: Standard scheduled workflow running daily at `12:00 UTC`.
+- `daily-activity.yml`: Standard scheduled workflow running daily at `09:00 AM IST` (`03:30 UTC`, Mumbai Timezone).
 - `backfill-history.yml`: Parameterized GitHub Actions workflow allowing users to backfill directly from GitHub web interface.
 
 ---

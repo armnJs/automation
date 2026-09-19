@@ -11,7 +11,7 @@ A clean, production-ready, zero-dependency automated activity generator and cont
 ## 📌 Project Overview
 
 This repository provides an automated system to maintain your GitHub contribution graph ("green dots"). It supports:
-1. **Automated Daily Activity**: Scheduled GitHub Actions workflow (`daily-activity.yml`) running at `12:00 UTC` every day.
+1. **Automated Daily Activity**: Scheduled GitHub Actions workflow (`daily-activity.yml`) running at `09:00 AM IST` (`03:30 UTC`, Mumbai Timezone) every day.
 2. **Historical Backfilling**: Interactive workflow (`backfill-history.yml`) or CLI command (`src/backfill_engine.py`) to generate commits retroactively for past days/years.
 3. **Structured Telemetry Logging**: Appends readable JSON telemetry logs to `data/activity_log.json`.
 

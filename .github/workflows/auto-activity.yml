@@ -2,7 +2,7 @@ name: Automatic Activity
 
 on:
   schedule:
-    - cron: '0 12 * * *' # Runs every day at 12:00 UTC
+    - cron: '30 3 * * *' # Runs daily at 09:00 AM IST (Mumbai Time, 03:30 UTC)
   workflow_dispatch: # Allows manual trigger from Actions tab
 
 jobs:
