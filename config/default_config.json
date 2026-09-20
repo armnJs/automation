@@ -11,6 +11,6 @@
   "min_commits_per_daily_run": 1,
   "max_commits_per_daily_run": 3,
   "include_weekends": true,
-  "default_user_name": "github-actions[bot]",
-  "default_user_email": "github-actions[bot]@users.noreply.github.com"
+  "default_user_name": "armnJs",
+  "default_user_email": "armaanshaikh0706@gmail.com"
 }
