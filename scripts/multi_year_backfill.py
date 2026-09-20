@@ -1,3 +1,9 @@
+# ==============================================================================
+#  Copyright (c) 2023-present armnJs (Armaan Sheikh). All Rights Reserved.
+#  Author: armnJs (https://github.com/armnJs/automation)
+#  License: MIT with Educational Attribution & Legal Liability Shield.
+# ==============================================================================
+
 from datetime import datetime, timedelta
 import os
 import random

@@ -1,4 +1,9 @@
 #!/usr/bin/env python3
+# ==============================================================================
+#  Copyright (c) 2023-present armnJs (Armaan Sheikh). All Rights Reserved.
+#  Author: armnJs (https://github.com/armnJs/automation)
+#  License: MIT with Educational Attribution & Legal Liability Shield.
+# ==============================================================================
 """
 Backfill Engine Script
 ---------------------

@@ -100,6 +100,9 @@ Contributions and enhancements are welcome! Please read [`CONTRIBUTING.md`](file
 
 ---
 
-## 📄 License
+## ⚖️ Legal Shield, Ownership & License
 
-This project is licensed under the [MIT License](LICENSE).
+- **Copyright**: Copyright © 2023-present **armnJs (Armaan Sheikh)**. All Rights Reserved.
+- **Open Source Inspiration**: Free for developers to inspect, study, and draw educational inspiration under the open-source [MIT License](LICENSE).
+- **Legal Disclaimer**: This repository is provided strictly "AS IS" for educational and demonstration purposes. The author (`armnJs`) assumes no liability for platform policy changes or user usage. For detailed terms, see [`LEGAL_DISCLAIMER.md`](LEGAL_DISCLAIMER.md) and [`PRIVACY_POLICY.md`](PRIVACY_POLICY.md).
+

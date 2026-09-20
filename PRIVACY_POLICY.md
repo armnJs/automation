@@ -16,9 +16,9 @@ This document outlines the privacy policy, legal compliance, copyright status, a
 
 ## 2. Intellectual Property & Copyright
 
-- **Original Codebase**: All source code, workflows, scripts, and documentation contained in this repository are 100% original work.
-- **Licensing**: This project is released under the open-source **MIT License** (see [`LICENSE`](LICENSE)). You are free to use, modify, distribute, and integrate this software without copyright restrictions.
-- **Third-Party Rights**: This repository does not violate or infringe upon any third-party copyrights, patents, trademarks, or trade secrets.
+- **Original Codebase & Ownership**: Copyright © 2023-present **armnJs (Armaan Sheikh)**. All original source code, workflows, scripts, and documentation contained in this repository are owned by `armnJs`.
+- **Licensing**: Released under the open-source **MIT License** with attribution clauses (see [`LICENSE`](LICENSE)). Developers are free to inspect, learn from, and take inspiration from this project.
+- **Legal Shield & Disclaimer**: For full liability limitation, warranty disclaimer, and usage policies, please refer to [`LEGAL_DISCLAIMER.md`](LEGAL_DISCLAIMER.md).
 
 ---
 
