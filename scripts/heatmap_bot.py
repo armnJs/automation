@@ -4,7 +4,7 @@ import random
 import subprocess
 
 # Number of days back to populate
-DAYS_BACK = 90
+DAYS_BACK = 30
 REPO_PATH = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 os.chdir(REPO_PATH)
