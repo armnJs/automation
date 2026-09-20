@@ -4,7 +4,7 @@ import random
 import subprocess
 
 # Number of days back to populate
-DAYS_BACK = 30
+DAYS_BACK = 365
 REPO_PATH = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 os.chdir(REPO_PATH)
@@ -14,8 +14,8 @@ for i in range(DAYS_BACK):
   date = datetime.now() - timedelta(days=i)
   date_str = date.strftime("%Y-%m-%d %H:%M:%S")
 
-  # Randomize number of commits per day (0 to 4)
-  num_commits = random.randint(0, 4)
+  # Randomize number of commits per day (1 to 5)
+  num_commits = random.randint(1, 5)
 
   for _ in range(num_commits):
     # Modify a dummy file to create a change
